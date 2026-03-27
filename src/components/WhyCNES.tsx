@@ -18,7 +18,7 @@ const reasons = [
     color: '#0d9488',
     bg: 'rgba(13,148,136,0.1)',
     title: 'Convênios exigem CNES ativo',
-    desc: 'Planos de saúde como Unimed, Bradesco e Amil só credenciam estabelecimentos com CNES regularizado e atualizado. Sem ele, nenhum contrato de convênio.',
+    desc: 'Planos de saúde como Unimed, Bradesco e Amil só credenciam estabelecimentos com CNES regularizado e atualizado.',
     tag: 'Convênios',
   },
   {
@@ -42,7 +42,7 @@ const reasons = [
     color: '#8b5cf6',
     bg: 'rgba(139,92,246,0.1)',
     title: 'Renovação obrigatória a cada 6 meses',
-    desc: 'O CNES precisa ser renovado semestralmente por exigência legal. A RBS faz toda a gestão da renovação para que seu certificado nunca vença nem gere irregularidades.',
+    desc: 'O CNES precisa ser renovado semestralmente por exigência legal. A RBS faz toda a gestão da renovação para que seu certificado nunca vença ou gere irregularidades.',
     tag: 'Renovação Semestral',
   },
   {
@@ -65,8 +65,16 @@ const reasons = [
 
 const stats = [
   { value: '100%', label: 'dos convênios exigem CNES', warning: false },
-  { value: null, label: 'a falta do certificado pode gerar sanções e multas', warning: true },
-  { value: '6 meses', label: 'ciclo obrigatório de renovação — gerenciamos tudo por você', warning: false },
+  {
+    value: null,
+    label: 'a falta do certificado pode gerar sanções e multas',
+    warning: true,
+  },
+  {
+    value: '6 meses',
+    label: 'ciclo obrigatório de renovação - gerenciamos tudo por você',
+    warning: false,
+  },
 ];
 
 export default function WhyCNES() {
@@ -96,7 +104,7 @@ export default function WhyCNES() {
     <section
       ref={sectionRef}
       style={{
-        padding: '100px 24px',
+        padding: '64px 24px',
         background:
           'linear-gradient(170deg, #061228 0%, #0c1f3f 45%, #0a2a40 100%)',
         position: 'relative',
@@ -144,16 +152,6 @@ export default function WhyCNES() {
       <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative' }}>
         {/* Header */}
         <div className='section-header wcnes-fade' style={{ marginBottom: 56 }}>
-          <div
-            className='section-chip'
-            style={{
-              background: 'rgba(13,148,136,0.15)',
-              color: '#5eead4',
-              borderColor: 'rgba(13,148,136,0.35)',
-            }}
-          >
-            Por que é importante?
-          </div>
           <h2 className='section-title' style={{ color: '#ffffff' }}>
             Por que o CNES é{' '}
             <span
@@ -168,20 +166,20 @@ export default function WhyCNES() {
             </span>{' '}
             para
             <br />
-            seu estabelecimento?
+            seu estabelecimento
           </h2>
           <p
             className='section-desc'
             style={{ color: 'rgba(255,255,255,0.55)' }}
           >
-            Mais do que uma exigência legal — o CNES impacta diretamente o
+            Mais do que uma exigência legal - o CNES - Cadastro Nacional do Estabelecimento de Saúde - impacta diretamente o
             funcionamento, o faturamento e a reputação do seu negócio.
           </p>
         </div>
 
         {/* Stats bar */}
         <div
-          className='wcnes-fade'
+          className='wcnes-fade wcnes-stats'
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
@@ -203,26 +201,45 @@ export default function WhyCNES() {
                 padding: '28px 32px',
                 textAlign: 'center',
                 backdropFilter: 'blur(10px)',
-                borderTop: s.warning ? '2px solid rgba(251,146,60,0.35)' : '2px solid transparent',
+                borderTop: s.warning
+                  ? '2px solid rgba(251,146,60,0.35)'
+                  : '2px solid transparent',
                 transition: 'background 0.3s',
               }}
             >
               {s.warning ? (
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
-                  <div style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: '50%',
-                    background: 'linear-gradient(135deg, rgba(251,146,60,0.2), rgba(239,68,68,0.15))',
-                    border: '1.5px solid rgba(251,146,60,0.4)',
+                <div
+                  style={{
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: '0 0 16px rgba(251,146,60,0.2)',
-                  }}>
-                    <FaExclamationTriangle size={20} color="#fb923c" />
+                    gap: 10,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: '50%',
+                      background:
+                        'linear-gradient(135deg, rgba(251,146,60,0.2), rgba(239,68,68,0.15))',
+                      border: '1.5px solid rgba(251,146,60,0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 0 16px rgba(251,146,60,0.2)',
+                    }}
+                  >
+                    <FaExclamationTriangle size={20} color='#fb923c' />
                   </div>
-                  <div style={{ fontSize: 13, color: 'rgba(251,200,120,0.85)', fontWeight: 500, lineHeight: 1.4 }}>
+                  <div
+                    style={{
+                      fontSize: 13,
+                      color: 'rgba(251,200,120,0.85)',
+                      fontWeight: 500,
+                      lineHeight: 1.4,
+                    }}
+                  >
                     {s.label}
                   </div>
                 </div>
@@ -242,7 +259,13 @@ export default function WhyCNES() {
                   >
                     {s.value}
                   </div>
-                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontWeight: 500 }}>
+                  <div
+                    style={{
+                      fontSize: 13,
+                      color: 'rgba(255,255,255,0.5)',
+                      fontWeight: 500,
+                    }}
+                  >
                     {s.label}
                   </div>
                 </>
@@ -253,9 +276,10 @@ export default function WhyCNES() {
 
         {/* Reasons grid */}
         <div
+          className='wcnes-reasons'
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: 16,
           }}
         >

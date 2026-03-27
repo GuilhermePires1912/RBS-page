@@ -18,7 +18,7 @@ const steps = [
     number: '03',
     icon: <FaCogs size={26} color="#5eead4" />,
     title: 'Processamento',
-    desc: 'Nossa equipe realiza todo o processo junto ao sistema CNES e órgãos competentes por você.',
+    desc: 'Nossa equipe realiza todo o processo junto ao sistema CNES, ANVISA, Vigilância Sanitária, ANS e demais órgãos competentes por você.',
   },
   {
     number: '04',

@@ -1,5 +1,5 @@
 import { MdHealthAndSafety } from 'react-icons/md'
-import { FaWhatsapp, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -83,12 +83,6 @@ export default function Footer() {
                 <a href="https://www.linkedin.com/in/raphael-bruno-4802b490" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin size={14} color="#0077b5" />
                   LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#contato">
-                  <FaMapMarkerAlt size={14} color="#0d9488" />
-                  Rua Bulhões de Carvalho, 619 – Copacabana, RJ
                 </a>
               </li>
             </ul>

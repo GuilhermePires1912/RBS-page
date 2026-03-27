@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { FaWhatsapp, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
+import { FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa'
 import { MdSend } from 'react-icons/md'
 
 export default function Contact() {
@@ -93,7 +93,7 @@ export default function Contact() {
               </div>
               <div>
                 <div style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '2px', fontWeight: 500 }}>Atendimento</div>
-                Rio de Janeiro – RJ · Brasil
+                Para todo o Brasil
               </div>
             </div>
           </div>

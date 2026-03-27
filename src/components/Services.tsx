@@ -3,13 +3,11 @@ import {
   MdAssignmentTurnedIn,
   MdAutorenew,
   MdBusinessCenter,
-  MdVerifiedUser,
 } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const services = [
   {
-    number: '01',
     tag: 'Novo Registro',
     icon: MdAssignmentTurnedIn,
     title: 'Cadastro CNES',
@@ -19,34 +17,22 @@ const services = [
     accent: 'linear-gradient(135deg, #0d9488, #38bdf8)',
   },
   {
-    number: '02',
     tag: 'Mais Solicitado',
     icon: MdAutorenew,
     title: 'Renovação CNES',
-    desc: 'O CNES precisa ser renovado a cada 6 meses. Cuidamos de todo o processo. Você não precisa se preocupar com prazos ou burocracia.',
-    pills: ['Renovação semestral', 'Gestão completa', 'Sem preocupação'],
+    desc: 'O CNES deve ser atualizado a cada 6 meses, de acordo com a legislação. Cuidamos de todo o processo. Você não precisa se preocupar com prazos e burocracia.',
+    pills: ['Envio documental', 'Renovação semestral automática', 'Sem acionamento'],
     highlight: true,
     accent: 'linear-gradient(135deg, #38bdf8, #818cf8)',
   },
   {
-    number: '03',
     tag: 'Consultoria',
     icon: MdBusinessCenter,
     title: 'Consultoria Especializada',
-    desc: 'Orientação completa em alvarás, licenciamentos e regularização sanitária.',
-    pills: ['Alvará sanitário', 'Licenciamentos', 'ANVISA'],
+    desc: 'Orientação completa em alvarás, licenciamentos e regularização sanitária/ANVISA.',
+    pills: ['Diagnóstico', 'Registro', 'Regularização'],
     highlight: false,
     accent: 'linear-gradient(135deg, #0891b2, #0d9488)',
-  },
-  {
-    number: '04',
-    tag: 'Compliance',
-    icon: MdVerifiedUser,
-    title: 'Regularização Sanitária',
-    desc: 'Adequação total às exigências da vigilância sanitária municipal e estadual.',
-    pills: ['Diagnóstico', 'Plano de ação', 'Representação'],
-    highlight: false,
-    accent: 'linear-gradient(135deg, #0d9488, #059669)',
   },
 ];
 
@@ -88,7 +74,7 @@ export default function Services() {
           </span>
         </h2>
         <p className='section-desc'>
-          Do cadastro inicial à consultoria regulatória completa — com
+          Do cadastro inicial à consultoria regulatória completa - com
           agilidade, segurança e aprovação garantida.
         </p>
       </div>
@@ -107,7 +93,7 @@ export default function Services() {
           const Icon = s.icon;
           return (
             <div
-              key={s.number}
+              key={s.tag}
               className='srv-card'
               style={{
                 background: s.highlight
@@ -139,25 +125,14 @@ export default function Services() {
                 }}
               />
 
-              {/* Top row: number + tag */}
+              {/* Top row: tag */}
               <div
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'space-between',
                   marginBottom: '22px',
                 }}
               >
-                <span
-                  style={{
-                    fontSize: '12px',
-                    fontWeight: 800,
-                    color: s.highlight ? 'rgba(255,255,255,0.2)' : '#d1d5db',
-                    letterSpacing: '1px',
-                  }}
-                >
-                  {s.number}
-                </span>
                 <span
                   style={{
                     fontSize: '10px',

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { MdHealthAndSafety } from 'react-icons/md'
 import { HiX } from 'react-icons/hi'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -54,6 +54,24 @@ export default function Header() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <a
+              href="https://www.linkedin.com/in/raphael-bruno-4802b490"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="header-linkedin"
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                width: 36, height: 36,
+                background: 'rgba(0,119,181,0.12)',
+                border: '1px solid rgba(0,119,181,0.3)',
+                borderRadius: '10px',
+                color: '#0077b5',
+                textDecoration: 'none',
+                transition: 'background 0.3s',
+              }}
+            >
+              <FaLinkedin size={17} />
+            </a>
+            <a
               href="https://wa.me/5521987002171"
               target="_blank"
               rel="noopener noreferrer"
@@ -67,6 +85,7 @@ export default function Header() {
               className="hamburger"
               onClick={() => setMenuOpen(true)}
               aria-label="Menu"
+              style={{ visibility: menuOpen ? 'hidden' : 'visible' }}
             >
               <span />
               <span />

@@ -69,11 +69,6 @@ export default function Hero() {
       />
 
       <div className='hero-content'>
-        <div className='hero-badge'>
-          <div className='hero-badge-dot' />
-          Especialistas em Gestão de Saúde
-        </div>
-
         <h1 className='hero-title'>
           Regularize seu
           <br />
@@ -93,8 +88,8 @@ export default function Hero() {
 
         <p className='hero-subtitle'>
           Cadastro e renovação do{' '}
-          <strong style={{ color: 'rgba(255,255,255,0.85)' }}>CNES</strong> com
-          agilidade e segurança. Consultoria especializada para clínicas,
+          <strong style={{ color: 'rgba(255,255,255,0.85)' }}>CNES - Cadastro Nacional do Estabelecimento de Saúde</strong>{' '}
+          com agilidade e segurança. Consultoria especializada para clínicas,
           hospitais, laboratórios e demais estabelecimentos da área da saúde.
         </p>
 
@@ -116,11 +111,11 @@ export default function Hero() {
 
         <div className='hero-stats'>
           <div className='stat-item'>
-            <div className='stat-number'>500+</div>
-            <div className='stat-label'>Cadastros</div>
+            <div className='stat-number'>+500</div>
+            <div className='stat-label'>Estabelecimentos</div>
           </div>
           <div className='stat-item'>
-            <div className='stat-number'>+5</div>
+            <div className='stat-number'>+10</div>
             <div className='stat-label'>Anos de Exp.</div>
           </div>
           <div className='stat-item'>
@@ -129,7 +124,7 @@ export default function Hero() {
           </div>
           <div className='stat-item'>
             <div className='stat-number'>6 meses</div>
-            <div className='stat-label'>Renovação Gerenciada</div>
+            <div className='stat-label'>Gestão da renovação semestral</div>
           </div>
         </div>
 
