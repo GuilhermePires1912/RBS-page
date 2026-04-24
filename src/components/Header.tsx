@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { MdHealthAndSafety } from 'react-icons/md'
 import { HiX } from 'react-icons/hi'
 import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
+import logoRbs from '../assets/logo-rbs.png'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -33,13 +33,11 @@ export default function Header() {
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-inner">
           <a href="#" className="logo-wrap">
-            <div className="logo-icon">
-              <MdHealthAndSafety size={26} color="#fff" />
-            </div>
-            <div>
-              <div className="logo-text-main">RBS</div>
-              <div className="logo-text-sub">Gestão em Saúde</div>
-            </div>
+            <img
+              src={logoRbs}
+              alt="RBS Gestão em Saúde"
+              className="header-logo"
+            />
           </a>
 
           <nav>
@@ -71,15 +69,35 @@ export default function Header() {
             >
               <FaLinkedin size={17} />
             </a>
+            {/* Versão desktop: botão com texto */}
             <a
               href="https://wa.me/5521987002171"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary header-cta-desktop"
               style={{ display: 'flex' }}
             >
               <FaWhatsapp size={16} />
               Fale Conosco
+            </a>
+            {/* Versão mobile: só ícone, mesmo estilo do LinkedIn */}
+            <a
+              href="https://wa.me/5521987002171"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="header-cta-mobile"
+              style={{
+                display: 'none', alignItems: 'center', justifyContent: 'center',
+                width: 34, height: 34,
+                background: 'rgba(184,150,90,0.15)',
+                border: '1px solid rgba(26,43,74,0.35)',
+                borderRadius: '10px',
+                color: '#B8965A',
+                textDecoration: 'none',
+                transition: 'background 0.3s',
+              }}
+            >
+              <FaWhatsapp size={17} />
             </a>
             <button
               className="hamburger"
@@ -97,9 +115,16 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        <button className="mobile-close" onClick={() => setMenuOpen(false)}>
-          <HiX />
-        </button>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+          <img
+            src={logoRbs}
+            alt="RBS Gestão em Saúde"
+            style={{ height: '36px', width: 'auto' }}
+          />
+          <button className="mobile-close" onClick={() => setMenuOpen(false)}>
+            <HiX />
+          </button>
+        </div>
         {navItems.map(item => (
           <a
             key={item.href}

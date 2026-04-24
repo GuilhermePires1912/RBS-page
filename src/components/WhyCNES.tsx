@@ -15,8 +15,8 @@ import {
 const reasons = [
   {
     icon: FaHandshake,
-    color: '#0d9488',
-    bg: 'rgba(13,148,136,0.1)',
+    color: '#B8965A',
+    bg: 'rgba(184,150,90,0.1)',
     title: 'Convênios exigem CNES ativo',
     desc: 'Planos de saúde como Unimed, Bradesco e Amil só credenciam estabelecimentos com CNES regularizado e atualizado.',
     tag: 'Convênios',
@@ -47,8 +47,8 @@ const reasons = [
   },
   {
     icon: MdVerified,
-    color: '#0891b2',
-    bg: 'rgba(8,145,178,0.1)',
+    color: '#4A6080',
+    bg: 'rgba(74,96,128,0.1)',
     title: 'Credibilidade e transparência',
     desc: 'O CNES é consultado por pacientes, ANS, ANVISA e gestores. Estar regularizado transmite confiança e profissionalismo ao seu estabelecimento.',
     tag: 'Reputação',
@@ -67,12 +67,12 @@ const stats = [
   { value: '100%', label: 'dos convênios exigem CNES', warning: false },
   {
     value: null,
-    label: 'a falta do certificado pode gerar sanções e multas',
+    label: 'A falta do certificado pode gerar sanções e multas',
     warning: true,
   },
   {
     value: '6 meses',
-    label: 'ciclo obrigatório de renovação - gerenciamos tudo por você',
+    label: 'Ciclo obrigatório de renovação - gerenciamos tudo por você.',
     warning: false,
   },
 ];
@@ -132,7 +132,7 @@ export default function WhyCNES() {
           width: 500,
           height: 500,
           background:
-            'radial-gradient(circle, rgba(13,148,136,0.1) 0%, transparent 65%)',
+            'radial-gradient(circle, rgba(184,150,90,0.1) 0%, transparent 65%)',
           pointerEvents: 'none',
         }}
       />
@@ -144,7 +144,7 @@ export default function WhyCNES() {
           width: 400,
           height: 400,
           background:
-            'radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 65%)',
+            'radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 65%)',
           pointerEvents: 'none',
         }}
       />
@@ -153,7 +153,7 @@ export default function WhyCNES() {
         {/* Header */}
         <div className='section-header wcnes-fade' style={{ marginBottom: 56 }}>
           <h2 className='section-title' style={{ color: '#ffffff' }}>
-            Por que o CNES é{' '}
+            O CNES é{' '}
             <span
               style={{
                 background: 'linear-gradient(135deg, #0d9488, #38bdf8)',
@@ -172,8 +172,9 @@ export default function WhyCNES() {
             className='section-desc'
             style={{ color: 'rgba(255,255,255,0.55)' }}
           >
-            Mais do que uma exigência legal - o CNES - Cadastro Nacional do Estabelecimento de Saúde - impacta diretamente o
-            funcionamento, o faturamento e a reputação do seu negócio.
+            Mais do que uma exigência legal - o CNES - Cadastro Nacional do
+            Estabelecimento de Saúde - impacta diretamente o funcionamento, o
+            faturamento e a reputação do seu negócio.
           </p>
         </div>
 
@@ -197,7 +198,7 @@ export default function WhyCNES() {
               style={{
                 background: s.warning
                   ? 'linear-gradient(135deg, rgba(251,146,60,0.08), rgba(239,68,68,0.06))'
-                  : 'rgba(12,31,63,0.5)',
+                  : 'rgba(26,43,74,0.5)',
                 padding: '28px 32px',
                 textAlign: 'center',
                 backdropFilter: 'blur(10px)',
@@ -279,7 +280,7 @@ export default function WhyCNES() {
           className='wcnes-reasons'
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(3, 1fr)',
             gap: 16,
           }}
         >
@@ -386,8 +387,8 @@ export default function WhyCNES() {
           className='wcnes-fade'
           style={{
             marginTop: 52,
-            background: 'rgba(13,148,136,0.1)',
-            border: '1px solid rgba(13,148,136,0.2)',
+            background: 'rgba(184,150,90,0.1)',
+            border: '1px solid rgba(184,150,90,0.2)',
             borderRadius: 18,
             padding: '28px 36px',
             display: 'flex',

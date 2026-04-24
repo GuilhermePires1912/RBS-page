@@ -57,7 +57,7 @@ export default function About() {
                 width: 220,
                 height: 220,
                 background:
-                  'radial-gradient(circle, rgba(13,148,136,0.18) 0%, transparent 70%)',
+                  'radial-gradient(circle, rgba(184,150,90,0.18) 0%, transparent 70%)',
                 borderRadius: '50%',
                 pointerEvents: 'none',
                 zIndex: 0,
@@ -71,7 +71,7 @@ export default function About() {
                 width: 160,
                 height: 160,
                 background:
-                  'radial-gradient(circle, rgba(56,189,248,0.14) 0%, transparent 70%)',
+                  'radial-gradient(circle, rgba(201,169,110,0.14) 0%, transparent 70%)',
                 borderRadius: '50%',
                 pointerEvents: 'none',
                 zIndex: 0,
@@ -86,7 +86,7 @@ export default function About() {
                 left: 30,
                 right: 30,
                 bottom: 30,
-                border: '1.5px dashed rgba(13,148,136,0.2)',
+                border: '1.5px dashed rgba(184,150,90,0.2)',
                 borderRadius: '28px',
                 pointerEvents: 'none',
                 zIndex: 0,
@@ -105,15 +105,15 @@ export default function About() {
                 padding: '8px 18px',
                 fontSize: '12px',
                 fontWeight: 700,
-                boxShadow: '0 8px 24px rgba(12,31,63,0.35)',
+                boxShadow: '0 8px 24px rgba(26,43,74,0.35)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '7px',
                 zIndex: 10,
-                border: '1px solid rgba(13,148,136,0.3)',
+                border: '1px solid rgba(184,150,90,0.3)',
               }}
             >
-              <MdVerified size={14} color='#0d9488' />
+              <MdVerified size={14} color='#B8965A' />
               Sócio
             </div>
 
@@ -126,7 +126,7 @@ export default function About() {
                 aspectRatio: '3 / 4',
                 maxHeight: 520,
                 boxShadow:
-                  '0 40px 80px rgba(12,31,63,0.25), 0 0 0 1px rgba(13,148,136,0.15)',
+                  '0 40px 80px rgba(26,43,74,0.25), 0 0 0 1px rgba(184,150,90,0.15)',
                 zIndex: 2,
               }}
             >
@@ -176,7 +176,7 @@ export default function About() {
                       fontSize: '36px',
                       fontWeight: 800,
                       color: 'white',
-                      boxShadow: '0 12px 30px rgba(13,148,136,0.5)',
+                      boxShadow: '0 12px 30px rgba(184,150,90,0.5)',
                     }}
                   >
                     RB
@@ -208,7 +208,7 @@ export default function About() {
                     right: 0,
                     height: '45%',
                     background:
-                      'linear-gradient(to top, rgba(12,31,63,0.85) 0%, rgba(12,31,63,0.4) 50%, transparent 100%)',
+                      'linear-gradient(to top, rgba(26,43,74,0.85) 0%, rgba(26,43,74,0.4) 50%, transparent 100%)',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'flex-end',
@@ -227,7 +227,7 @@ export default function About() {
                   </div>
                   <div
                     style={{
-                      color: '#5eead4',
+                      color: '#C9A96E',
                       fontSize: '12px',
                       fontWeight: 600,
                       marginTop: 4,
@@ -332,7 +332,7 @@ export default function About() {
                 <div
                   style={{
                     fontSize: '11px',
-                    color: '#94a3b8',
+                    color: '#4A6080',
                     fontWeight: 600,
                     marginTop: 2,
                     letterSpacing: '0.3px',
@@ -353,7 +353,7 @@ export default function About() {
                 background: 'linear-gradient(135deg, #0d9488, #0891b2)',
                 borderRadius: '16px',
                 padding: '12px 16px',
-                boxShadow: '0 12px 30px rgba(13,148,136,0.4)',
+                boxShadow: '0 12px 30px rgba(184,150,90,0.4)',
                 zIndex: 10,
                 textAlign: 'center',
                 minWidth: 70,
@@ -419,7 +419,7 @@ export default function About() {
           <div className='about-highlights fade-up'>
             <div className='highlight-item'>
               <div className='highlight-icon'>
-                <MdHealthAndSafety color='#0d9488' size={20} />
+                <MdHealthAndSafety color='#B8965A' size={20} />
               </div>
               <div className='highlight-text'>
                 <strong>Especialização em CNES</strong>
@@ -428,11 +428,11 @@ export default function About() {
             </div>
             <div className='highlight-item'>
               <div className='highlight-icon'>
-                <MdSchool color='#0d9488' size={20} />
+                <MdSchool color='#B8965A' size={20} />
               </div>
               <div className='highlight-text'>
                 <strong>Formação Especializada</strong>
-                Gestão em Saúde e Regulação Sanitária
+                Gestão Pública e Gestão em Saúde
               </div>
             </div>
           </div>

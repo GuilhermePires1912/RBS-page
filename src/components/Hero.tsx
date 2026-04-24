@@ -51,7 +51,7 @@ export default function Hero() {
           width: 400,
           height: 400,
           background:
-            'radial-gradient(circle, rgba(13,148,136,0.12) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(184,150,90,0.12) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -63,7 +63,7 @@ export default function Hero() {
           width: 300,
           height: 300,
           background:
-            'radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -153,7 +153,7 @@ export default function Hero() {
                 fontWeight: 500,
               }}
             >
-              <MdVerified size={14} style={{ color: '#0d9488' }} />
+              <MdVerified size={14} style={{ color: '#B8965A' }} />
               {badge}
             </div>
           ))}

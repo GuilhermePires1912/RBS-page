@@ -1,5 +1,5 @@
-import { MdHealthAndSafety } from 'react-icons/md'
 import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
+import logoRbs from '../assets/logo-rbs.png'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -10,14 +10,12 @@ export default function Footer() {
         <div className="footer-top">
           {/* Brand */}
           <div className="footer-brand">
-            <div className="logo-wrap" style={{ marginBottom: '16px' }}>
-              <div className="logo-icon">
-                <MdHealthAndSafety size={26} color="#fff" />
-              </div>
-              <div>
-                <div className="logo-text-main">RBS</div>
-                <div className="logo-text-sub">Gestão em Saúde</div>
-              </div>
+            <div style={{ marginBottom: '16px' }}>
+              <img
+                src={logoRbs}
+                alt="RBS Gestão em Saúde"
+                className="footer-logo"
+              />
             </div>
             <p>
               Especialistas em cadastro e renovação do CNES, consultoria regulatória
