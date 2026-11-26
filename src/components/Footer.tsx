@@ -11,11 +11,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <div style={{ marginBottom: '16px' }}>
-              <img
-                src={logoRbs}
-                alt="RBS Gestão em Saúde"
-                className="footer-logo"
-              />
+              <div className="logo-box">
+                <img
+                  src={logoRbs}
+                  alt="RBS Gestão em Saúde"
+                  className="footer-logo"
+                />
+              </div>
             </div>
             <p>
               Especialistas em cadastro e renovação do CNES, consultoria regulatória

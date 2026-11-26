@@ -33,11 +33,13 @@ export default function Header() {
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-inner">
           <a href="#" className="logo-wrap">
-            <img
-              src={logoRbs}
-              alt="RBS Gestão em Saúde"
-              className="header-logo"
-            />
+            <div className="logo-box">
+              <img
+                src={logoRbs}
+                alt="RBS Gestão em Saúde"
+                className="header-logo"
+              />
+            </div>
           </a>
 
           <nav>
@@ -50,7 +52,7 @@ export default function Header() {
             </ul>
           </nav>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: '14px', flexShrink: 0 }}>
             <a
               href="https://www.linkedin.com/in/raphael-bruno-4802b490"
               target="_blank"
@@ -88,7 +90,7 @@ export default function Header() {
               className="header-cta-mobile"
               style={{
                 display: 'none', alignItems: 'center', justifyContent: 'center',
-                width: 34, height: 34,
+                width: 36, height: 36,
                 background: 'rgba(184,150,90,0.15)',
                 border: '1px solid rgba(26,43,74,0.35)',
                 borderRadius: '10px',
@@ -116,11 +118,13 @@ export default function Header() {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-          <img
-            src={logoRbs}
-            alt="RBS Gestão em Saúde"
-            style={{ height: '36px', width: 'auto' }}
-          />
+          <div className="logo-box">
+            <img
+              src={logoRbs}
+              alt="RBS Gestão em Saúde"
+              style={{ height: '30px', width: 'auto', display: 'block' }}
+            />
+          </div>
           <button className="mobile-close" onClick={() => setMenuOpen(false)}>
             <HiX />
           </button>
