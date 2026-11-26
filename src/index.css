@@ -83,9 +83,21 @@ body {
   text-decoration: none;
 }
 
+/* Logo container — cria contraste sobre fundo escuro */
+.logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 7px 14px;
+  border: 1px solid rgba(184, 150, 90, 0.35);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
 /* Logo image — header */
 .header-logo {
-  height: 44px;
+  height: 36px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -93,7 +105,7 @@ body {
 
 /* Logo image — footer */
 .footer-logo {
-  height: 44px;
+  height: 36px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -316,7 +328,7 @@ body {
 }
 
 .btn-hero-primary {
-  background: linear-gradient(135deg, #1A2B4A, #2E4057);
+  background: linear-gradient(135deg, #0d9488, #0891b2);
   color: #ffffff;
   padding: 16px 36px;
   border-radius: 30px;
@@ -336,6 +348,7 @@ body {
 .btn-hero-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(13, 148, 136, 0.6);
+  background: linear-gradient(135deg, #0f766e, #0369a1);
 }
 
 /* Hero stats */
@@ -752,6 +765,7 @@ body {
     linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
   background-size: 60px 60px;
+  pointer-events: none;
 }
 
 .process .section-chip {
@@ -1293,6 +1307,14 @@ body {
   /* Botão WhatsApp: oculta texto, mostra só ícone */
   .header-cta-desktop { display: none !important; }
   .header-cta-mobile { display: flex !important; }
+
+  /* Logo proporcional no mobile — altura alinhada com os ícones */
+  .logo-box { padding: 0 10px; height: 36px; border-radius: 9px; max-width: 44vw; }
+  .header-logo { height: 18px; max-width: 100%; }
+  .hamburger { width: 36px !important; height: 36px !important; }
+
+  /* Ícones do header no mobile: gap menor entre si, mais espaço em relação ao logo */
+  .header-actions { gap: 8px !important; margin-left: 20px; }
 
   /* Hero */
   .hero-content { padding: 100px 20px 60px; }
