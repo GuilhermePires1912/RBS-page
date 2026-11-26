@@ -10,6 +10,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* O site é só de tema claro: impede o navegador de forçar o modo escuro */
+  color-scheme: only light;
 }
 
 body {
